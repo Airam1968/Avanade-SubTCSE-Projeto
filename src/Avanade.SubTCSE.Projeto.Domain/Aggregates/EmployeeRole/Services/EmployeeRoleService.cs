@@ -1,4 +1,5 @@
-﻿using Avanade.SubTCSE.Projeto.Domain.Aggregates.EmployeeRole.Interfaces.Services;
+﻿using Avanade.SubTCSE.Projeto.Application.Dtos.EmployeeRole;
+using Avanade.SubTCSE.Projeto.Domain.Aggregates.EmployeeRole.Interfaces.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
