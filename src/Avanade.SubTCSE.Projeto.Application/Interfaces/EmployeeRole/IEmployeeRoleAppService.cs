@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using Avanade.SubTCSE.Projeto.Application.Dtos.EmployeeRole;
 using System.Threading.Tasks;
 
 namespace Avanade.SubTCSE.Projeto.Application.Interfaces.EmployeeRole
 {
     public interface IEmployeeRoleAppService
     {
-        void AddEmproyeeRole(Dtos.EmployeeRoleDto employeeRoleDto);
+        Task<EmployeeRoleDto> AddEmployeeRole(EmployeeRoleDto employeeRoleDto);
     }
 }

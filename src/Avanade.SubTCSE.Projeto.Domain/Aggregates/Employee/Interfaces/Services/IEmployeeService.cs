@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 
-namespace Avanade.SubTCSE.Projeto.Domain.Aggregates.Employee.Services
+namespace Avanade.SubTCSE.Projeto.Domain.Aggregates.Employee.Interfaces.Services
 {
     public interface IEmployeeService
     {
-        Task<Employee.Entities.Employee> AddEmployee(Entities.Employee employee);
+        Task<Entities.Employee> AddEmployee(Entities.Employee employee);
     }
 }
