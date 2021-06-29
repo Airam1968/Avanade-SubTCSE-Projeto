@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using FluentValidation;
+﻿using FluentValidation;
 
 namespace Avanade.SubTCSE.Projeto.Domain.Aggregates.Employee.Validators
 {
-    public class EmployeeRoleValidator : AbstractValidator<Entities.EmployeeRole>
+    public class EmployeeValidator : AbstractValidator<EmployeeRole.Entities.EmployeeRole>
     {
-        public EmployeeRoleValidator()
+        public EmployeeValidator()
         {
             RuleSet("new", () =>
             {

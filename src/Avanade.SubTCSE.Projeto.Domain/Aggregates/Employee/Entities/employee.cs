@@ -1,20 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Avanade.SubTCSE.Projeto.Domain.Aggregates.Employee.Entities
 {
-    public record employee : BaseEntity<string>
+    public record Employee : BaseEntity<string>
     {
-        public employee(string firstName,
+        public Employee(string firstName,
             string surName,
             int myProperty,
             DateTime birthday,
             bool active,
             decimal salary,
-            Entities.EmployeeRole employeeRole)
+            EmployeeRole.Entities.EmployeeRole employeeRole)
         {
             FirstName = firstName;
             SurName = surName;
@@ -33,10 +29,10 @@ namespace Avanade.SubTCSE.Projeto.Domain.Aggregates.Employee.Entities
 
         public DateTime Birthday { get; init; }
 
-        public bool active { get; init; }
+        public bool Active { get; init; }
 
         public decimal Salary { get; init; }
 
-        public Employee.Entities.EmployeeRole EmployeeRole { get; init; }
+        public EmployeeRole.Entities.EmployeeRole EmployeeRole { get; init; }
     }
 }
