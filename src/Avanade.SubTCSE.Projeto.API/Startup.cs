@@ -12,7 +12,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Avanade.SubTCSE.Projeto.API
+namespace Avanade.SubTCSE.Projeto.Api
 {
     public class Startup
     {
@@ -26,11 +26,10 @@ namespace Avanade.SubTCSE.Projeto.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Avanade.SubTCSE.Projeto.API", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Avanade.SubTCSE.Projeto.Api", Version = "v1" });
             });
         }
 
@@ -41,7 +40,7 @@ namespace Avanade.SubTCSE.Projeto.API
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Avanade.SubTCSE.Projeto.API v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Avanade.SubTCSE.Projeto.Api v1"));
             }
 
             app.UseHttpsRedirection();

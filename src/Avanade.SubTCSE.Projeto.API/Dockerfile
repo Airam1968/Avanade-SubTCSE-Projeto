@@ -7,16 +7,16 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /src
-COPY ["Avanade.SubTCSE.Projeto.API/Avanade.SubTCSE.Projeto.API.csproj", "Avanade.SubTCSE.Projeto.API/"]
-RUN dotnet restore "Avanade.SubTCSE.Projeto.API/Avanade.SubTCSE.Projeto.API.csproj"
+COPY ["Avanade.SubTCSE.Projeto.Api/Avanade.SubTCSE.Projeto.Api.csproj", "Avanade.SubTCSE.Projeto.Api/"]
+RUN dotnet restore "Avanade.SubTCSE.Projeto.Api/Avanade.SubTCSE.Projeto.Api.csproj"
 COPY . .
-WORKDIR "/src/Avanade.SubTCSE.Projeto.API"
-RUN dotnet build "Avanade.SubTCSE.Projeto.API.csproj" -c Release -o /app/build
+WORKDIR "/src/Avanade.SubTCSE.Projeto.Api"
+RUN dotnet build "Avanade.SubTCSE.Projeto.Api.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "Avanade.SubTCSE.Projeto.API.csproj" -c Release -o /app/publish
+RUN dotnet publish "Avanade.SubTCSE.Projeto.Api.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "Avanade.SubTCSE.Projeto.API.dll"]
+ENTRYPOINT ["dotnet", "Avanade.SubTCSE.Projeto.Api.dll"]

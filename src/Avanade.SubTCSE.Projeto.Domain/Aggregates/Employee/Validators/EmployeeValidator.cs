@@ -7,7 +7,7 @@ namespace Avanade.SubTCSE.Projeto.Domain.Aggregates.Employee.Validators
     {
         public EmployeeValidator()
         {
-            RuleSet("new", () =>
+            RuleSet("new", () => 
             {
                 RuleFor(e => e.FirstName)
                 .NotEmpty()
