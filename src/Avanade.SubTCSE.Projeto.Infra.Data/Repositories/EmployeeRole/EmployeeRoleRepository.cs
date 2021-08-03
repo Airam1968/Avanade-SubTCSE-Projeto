@@ -1,12 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Avanade.SubTCSE.Projeto.Domain.Aggregates.EmployeeRole.Interfaces.Repository;
+using Avanade.SubTCSE.Projeto.Domain.Base.Repository.MongoDB;
+using Avanade.SubTCSE.Projeto.Infra.Data.Repositories.Base;
 
 namespace Avanade.SubTCSE.Projeto.Infra.Data.Repositories.EmployeeRole
 {
-    class EmployeeRoleRepository
+    public class EmployeeRoleRespository
+        : BaseRepository<Domain.Aggregates.EmployeeRole.Entities.EmployeeRole, string>
+        , IEmployeeRoleRepository
     {
+        public EmployeeRoleRespository(IMongoDBContext mongoDBContext)
+            : base(mongoDBContext, "employeeRole")
+        {
+        }
     }
 }
